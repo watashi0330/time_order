@@ -1,0 +1,111 @@
+h2 {
+  font-family: "Mountains of Christmas";
+  color: #fff;
+  position: relative;
+  margin-top: 200px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  font-size: 4em;
+  text-shadow: 0px 0px 8px rgba(255, 65, 185, 1);
+}
+body {
+  background-color: #111;
+  margin: 0;
+}
+#wire {
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  padding: 0;
+  width: 100%;
+  top: -80px;
+  border-bottom: 3px solid #222;
+  height: 100px;
+}
+#wire li {
+  position: relative;
+  list-style: none;
+  margin: 0 15px;
+  padding: 0;
+  display: inline-block;
+  width: 15px;
+  height: 30px;
+  border-radius: 50%;
+  top: 102px;
+  background: #fff;
+  animation-name: even-flash;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+#wire li:nth-child(2n + 1) {
+  animation-name: odd-flash;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+#wire li:nth-child(3n + 1) {
+  animation-name: third-flash;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-delay: 0.3s;
+}
+#wire li::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 10px;
+  border-radius: 4px;
+  top: -5px;
+  left: 0;
+  background: #444;
+}
+@keyframes odd-flash {
+  0%,
+  100% {
+    background: rgba(255, 65, 185, 0.5);
+    box-shadow: 0px 2px 20px 4px rgba(255, 65, 185, 0.3);
+  }
+  50% {
+    background: rgba(255, 65, 185, 1);
+    box-shadow: 0px 2px 20px 4px rgba(255, 65, 185, 1);
+  }
+}
+
+@keyframes even-flash {
+  0%,
+  100% {
+    background: rgba(255, 230, 65, 1);
+    box-shadow: 0px 2px 20px 4px rgba(255, 230, 65, 1);
+  }
+  50% {
+    background: rgba(255, 230, 65, 0.5);
+    box-shadow: 0px 2px 20px 4px rgba(255, 230, 65, 0.3);
+  }
+}
+@keyframes third-flash {
+  0%,
+  100% {
+    background: rgba(17, 189, 40, 1);
+    box-shadow: 0px 2px 20px 4px rgba(17, 189, 40, 1);
+  }
+  50% {
+    background: rgba(17, 189, 40, 0.5);
+    box-shadow: 0px 2px 20px 4px rgba(17, 189, 40, 0.3);
+  }
+}
+h3 {
+  text-align: center;
+  color: rgba(255, 234, 190, 0.4);
+  font-family: "Mountains of Christmas";
+}
+a {
+  text-decoration: none;
+  width: 50px;
+  border: 1px solid black;
+  display: inline;
+}
+a:hover {
+  background-color: rgba(255, 65, 185, 0.3);
+}
