@@ -1,0 +1,47 @@
+body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+.wrapper {
+  display: grid;
+  grid-auto-rows: minmax(7vh, auto);
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+header {
+  background-color: #f1f1f1;
+  grid-column: 1 / span 5;
+  /* text heseg */
+  text-align: center;
+  padding-top: 15px;
+  font-weight: bold;
+}
+
+nav {
+  border: solid 1px black;
+  grid-column: 1 / span 5;
+}
+aside {
+  border: solid 1px black;
+  grid-column: 1 / span 3;
+  grid-row: 3 / span 3;
+}
+main {
+  border: solid 1px black;
+  grid-row: 3 / span 3;
+  grid-column: 4 / span 2;
+}
+footer {
+  border: solid 1px black;
+  grid-column: 1 / span 5;
+}
+.nav ul {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+.nav li {
+  list-style: none;
+}
+.nav li a {
+  text-decoration: none;
+}
